@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creation</title>
+    <style>
+        body {
+            background-color: rgb(106, 150, 216);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background:black;
+            background-color: rgb(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            border: 5px solid wheat;
+        }
+
+        .like-comment-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like-button::before {
+            content: "\1F44D"; /* Thumbs-up Unicode character */
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comment-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like-count {
+            margin-top: 10px;
+        }
+        footer{
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        @media only screen and (max-width: 500px) {
+  body{
+    background-color: red;
+  }
+  header {
+            background:black;
+            background-color: rgb(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            border: 5px solid wheat;
+        }
+
+        .like-comment-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like-button::before {
+            content: "\1F44D"; /* Thumbs-up Unicode character */
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .comment-input {
+            flex-grow: 1;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comment-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .like-count {
+            margin-top: 10px;
+        }
+        footer{
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Creation</h1>
+    </header>
+    <main>
+        <div class="image-container" data-image-id="1">
+            <a href="downloadpages/download page (9).html"><img src="/McImages/MC00000 (9).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(1)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(1)">Comment</button>
+            </div>
+            <div class="like-count">683 likes</div>
+        </div>
+        <div class="image-container" data-image-id="2">
+            <a href="downloadpages/download page (2).html"><img src="/McImages/MC00000 (2).jpg" alt="Image 2"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(2)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(2)">Comment</button>
+            </div>
+            <div class="like-count">168 likes</div>
+        </div>
+        <div class="image-container" data-image-id="3">
+            <a href="downloadpages/download page (3).html"><img src="/McImages/MC00000 (3).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(3)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(3)">Comment</button>
+            </div>
+            <div class="like-count">98 likes</div>
+        </div>
+        <div class="image-container" data-image-id="4">
+            <a href="downloadpages/download page (4).html"><img src="/McImages/MC00000 (4).jpg" alt="Image 2"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(4)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(4)">Comment</button>
+            </div>
+            <div class="like-count">382 likes</div>
+        </div>
+        <div class="image-container" data-image-id="5">
+            <a href="downloadpages/download page (5).html"><img src="/McImages/MC00000 (5).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(5)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(5)">Comment</button>
+            </div>
+            <div class="like-count">280 likes</div>
+        </div>
+        <div class="image-container" data-image-id="6">
+            <a href="downloadpages/download page (6).html"><img src="/McImages/MC00000 (6).jpg" alt="Image 2"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(6)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(6)">Comment</button>
+            </div>
+            <div class="like-count">278 likes</div>
+        </div>
+        <div class="image-container" data-image-id="7">
+            <a href="downloadpages/download page (10).html"><img src="/McImages/MC00000 (10).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(7)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(7)">Comment</button>
+            </div>
+            <div class="like-count">272 likes</div>
+        </div>
+        <div class="image-container" data-image-id="8">
+            <a href="downloadpages/download page (11).html"><img src="/McImages/MC00000 (11).jpg" alt="Image 2"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(8)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(8)">Comment</button>
+            </div>
+            <div class="like-count">176 likes</div>
+        </div><div class="image-container" data-image-id="9">
+            <a href="downloadpages/download page (1).html"><img src="/McImages/MC00000 (1).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(9)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(9)">Comment</button>
+            </div>
+            <div class="like-count">246 likes</div>
+        </div>
+        <div class="image-container" data-image-id="10">
+            <a href="downloadpages/download page (7).html"><img src="/McImages/MC00000 (7).jpg" alt="Image 2"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(10)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(10)">Comment</button>
+            </div>
+            <div class="like-count">157 likes</div>
+        </div><div class="image-container" data-image-id="11">
+            <a href="downloadpages/download page (8).html"><img src="/McImages/MC00000 (8).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(11)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(11)">Comment</button>
+            </div>
+            <div class="like-count">157 likes</div>
+        </div><div class="image-container" data-image-id="12">
+            <a href="downloadpages/download page (14).html"><img src="/McImages/MC00000 (14).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(12)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(12)">Comment</button>
+            </div>
+            <div class="like-count">128 likes</div>
+        </div><div class="image-container" data-image-id="13">
+            <a href="downloadpages/download page (13).html"><img src="/McImages/MC00000 (13).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(13)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(13)">Comment</button>
+            </div>
+            <div class="like-count">89 likes</div>
+        </div><div class="image-container" data-image-id="14">
+            <a href="downloadpages/download page (12).html"><img src="/McImages/MC00000 (12).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(14)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(14)">Comment</button>
+            </div>
+            <div class="like-count">65 likes</div>
+        </div>
+        <div class="image-container" data-image-id="15">
+            <a href="downloadpages/download page (15).html"><img src="/McImages/MC00000 (15).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(15)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(15)">Comment</button>
+            </div>
+            <div class="like-count">78 likes</div>
+        </div>
+
+        <div class="image-container" data-image-id="18">
+            <a href="downloadpages/download page (18).html"><img src="/McImages/MC00000 (18).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(18)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(18)">Comment</button>
+            </div>
+            <div class="like-count">84 likes</div>
+        </div>
+
+            <div class="image-container" data-image-id="19">
+                <a href="downloadpages/download page (19).html"><img src="/McImages/MC00000 (19).jpg" alt="Image 1"></a>
+                <div class="like-comment-container">
+                    <button class="like-button" onclick="likeImage(19)">Like</button>
+                    <input class="comment-input" type="text" placeholder="Write a comment">
+                    <button class="comment-button" onclick="addComment(19)">Comment</button>
+                </div>
+                <div class="like-count">67 likes</div>
+            </div>
+
+                <div class="image-container" data-image-id="20">
+                    <a href="downloadpages/download page (20).html"><img src="/McImages/MC00000 (20).jpg" alt="Image 1"></a>
+                    <div class="like-comment-container">
+                        <button class="like-button" onclick="likeImage(20)">Like</button>
+                        <input class="comment-input" type="text" placeholder="Write a comment">
+                        <button class="comment-button" onclick="addComment(20)">Comment</button>
+                    </div>
+                    <div class="like-count">35 likes</div>
+                </div>
+
+                    <div class="image-container" data-image-id="21">
+                        <a href="downloadpages/download page (21).html"><img src="/McImages/MC00000 (21).jpg" alt="Image 1"></a>
+                        <div class="like-comment-container">
+                            <button class="like-button" onclick="likeImage(21)">Like</button>
+                            <input class="comment-input" type="text" placeholder="Write a comment">
+                            <button class="comment-button" onclick="addComment(21)">Comment</button>
+                        </div>
+                        <div class="like-count">48 likes</div>
+                    </div>
+
+                        <div class="image-container" data-image-id="21">
+                            <a href="downloadpages/download page (21).html"><img src="/McImages/MC00000 (21).jpg" alt="Image 1"></a>
+                            <div class="like-comment-container">
+                                <button class="like-button" onclick="likeImage(21)">Like</button>
+                                <input class="comment-input" type="text" placeholder="Write a comment">
+                                <button class="comment-button" onclick="addComment(21)">Comment</button>
+                            </div>
+                            <div class="like-count">89 likes</div>
+                        </div>
+
+                            <div class="image-container" data-image-id="22">
+                                <a href="downloadpages/download page (22).html"><img src="/McImages/MC00000 (22).jpg" alt="Image 1"></a>
+                                <div class="like-comment-container">
+                                    <button class="like-button" onclick="likeImage(22)">Like</button>
+                                    <input class="comment-input" type="text" placeholder="Write a comment">
+                                    <button class="comment-button" onclick="addComment(22)">Comment</button>
+                                </div>
+                                <div class="like-count">80 likes</div>
+                            </div>
+
+                                <div class="image-container" data-image-id="23">
+                                    <a href="downloadpages/download page (23).html"><img src="/McImages/MC00000 (23).jpg" alt="Image 1"></a>
+                                    <div class="like-comment-container">
+                                        <button class="like-button" onclick="likeImage(23)">Like</button>
+                                        <input class="comment-input" type="text" placeholder="Write a comment">
+                                        <button class="comment-button" onclick="addComment(23)">Comment</button>
+                                    </div>
+                                    <div class="like-count">257 likes</div>
+                                </div>
+
+                                    <div class="image-container" data-image-id="24">
+                                        <a href="downloadpages/download page (24).html"><img src="/McImages/MC00000 (24).jpg" alt="Image 1"></a>
+                                        <div class="like-comment-container">
+                                            <button class="like-button" onclick="likeImage(24)">Like</button>
+                                            <input class="comment-input" type="text" placeholder="Write a comment">
+                                            <button class="comment-button" onclick="addComment(24)">Comment</button>
+                                        </div>
+                                        <div class="like-count">86 likes</div>
+                                    </div>
+
+                                    <div class="image-container" data-image-id="17">
+                                        <a href="downloadpages/download page (17).html"><img src="/McImages/MC00000 (17).jpg" alt="Image 1"></a>
+                                        <div class="like-comment-container">
+                                            <button class="like-button" onclick="likeImage(17)">Like</button>
+                                            <input class="comment-input" type="text" placeholder="Write a comment">
+                                            <button class="comment-button" onclick="addComment(17)">Comment</button>
+                                        </div>
+                                        <div class="like-count">187 likes</div>
+                                    </div>
+        <div class="image-container" data-image-id="16">
+            <a href="downloadpages/download page (16).html"><img src="/McImages/MC00000 (16).jpg" alt="Image 1"></a>
+            <div class="like-comment-container">
+                <button class="like-button" onclick="likeImage(16)">Like</button>
+                <input class="comment-input" type="text" placeholder="Write a comment">
+                <button class="comment-button" onclick="addComment(16)">Comment</button>
+            </div>
+            <div class="like-count">149 likes</div>
+            
+        <!-- Repeat the above structure for the other images -->
+    </main>
+    <footer>
+        &copy; 2023 MyCreation - All Images copyright Belongs to Nikhil
+    </footer>
+
+    <script>
+        // JavaScript for handling likes and comments
+        const likedImages = JSON.parse(localStorage.getItem('likedImages')) || {};
+        const comments = JSON.parse(localStorage.getItem('comments')) || {};
+
+        function likeImage(imageId) {
+            if (!likedImages[imageId]) {
+                likedImages[imageId] = 0;
+            }
+
+            if (likedImages[imageId] === 0) {
+                likedImages[imageId]++;
+                localStorage.setItem('likedImages', JSON.stringify(likedImages));
+
+                const likeCountElement = document.querySelector(`[data-image-id="${imageId}"] .like-count`);
+                likeCountElement.textContent = likedImages[imageId] === 1
+                    ? '1 like'
+                    : likedImages[imageId] + ' likes';
+            }
+        }
+
+        function addComment(imageId) {
+            const commentInput = document.querySelector(`[data-image-id="${imageId}"] .comment-input`);
+            const commentText = commentInput.value.trim();
+
+            if (commentText) {
+                if (!comments[imageId]) {
+                    comments[imageId] = [];
+                }
+
+                comments[imageId].push(commentText);
+                localStorage.setItem('comments', JSON.stringify(comments));
+
+                // You can choose how to display comments; here, we're logging them
+                console.log(`Comment on Image ${imageId}: ${commentText}`);
+
+                // Clear the comment input
+                commentInput.value = '';
+            }
+        }
+        window.addEventListener('load', function(){
+            alert('Yo this website is under development😅😁')
+        })
+    </script>
+</body>
+</html>

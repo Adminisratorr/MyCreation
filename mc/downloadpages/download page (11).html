@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Center the image and the download button */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style for the download button */
+        .download-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+
+        /* Style for the image */
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media query for smaller screens (e.g., phones) */
+        @media (max-width: 768px) {
+            .download-button {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img class="image" src="/McImages/MC00000 (11).jpg" alt="Image">
+        <a class="download-button" href="/McImages/MC00000 (11).jpg" download>Download Image</a>
+    </div>
+</body>
+</html>
